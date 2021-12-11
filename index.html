@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue tutorial one</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <!--ACCESSING DATA AND METHODS-->
+        <h1>{{ greet() }}</h1>
+        <!-- <p>{{ aboutMe(color) }}</p> -->
+        
+        <!--DATA BINDING-->
+        <!-- <a :href="website">My portfolio</a>
+        <input type="text" v-bind:value="name">
+
+        <p v-html="aTag"></p> -->
+
+        <!--EVENT HANDLING-->
+        <!-- <button v-on:click="add(1)">Add a year</button>
+        <button @click="substract(1)">Substract a year</button>
+        <button @dblclick.once="add(10)">Add 10 years</button>
+        <button v-on:dblclick="substract(10)">Substract 10 years</button>
+        <p>My age is {{age}}</p>
+
+        <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div> -->
+
+        <!--EVENT MODIFIER-->
+        <!-- <button v-on:click.once="add(1)">Add a year-modifier</button>
+        <a @click="inform" href="https://google.com">Go to Google</a> -->
+
+        <!--KEYBOARD EVENT-->
+        <!-- <label>Name: </label>
+        <input type="text" v-on:keyup.enter="updateUsername"/>
+        <label>Age: </label>
+        <input type="number" v-on:keyup.space="updatePassword">
+
+        <h1>{{username}}, {{password}}</h1> -->
+
+        <!--2-WAY DATA BINDING... it can be used to update the value of a data property to the value of the input field-->
+        <!-- <label>Name: </label>
+        <input type="text" v-model="username"/>
+        <p>{{username}}</p> -->
+
+        <!--COMPUTED PROPERTIES-->
+        <!-- <button @click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
+
+        <p>Age + A = {{addToA}}</p>
+        <p>Age + B = {{addToB}}</p> -->
+
+        <!--DYNAMIC CSS PROPERTY-->
+        <!-- <h2>Example 1</h2>
+        <button @click="toggleClass()">toggle class existence</button>
+        <p :class="{trust: true}">Great</p>
+        <p v-bind:class="{wow: available}">This is good</p>
+        
+        <h2>Example 2</h2>
+        <button v-on:click="available = !available">Toggle available</button>
+        <button v-on:click="nearby = !nearby">Toggle nearby</button>
+
+        <div v-bind:class="compClasses">
+            <span class="one">Test available</span>
+            <span class="two">Test nearby</span>
+        </div> -->
+
+        <!--CONDITIONAL (v-if, v-else-if, v-show).. element with v-if/v-show get displayed when the value is set to true-->
+        <!-- <button @click="error = !error">Toggle error</button>
+        <button @click="success = !success">Toggle success</button>
+        <p v-if="error">There has been an error</p>
+        <p v-else-if="success">Whoooo Success</p>
+
+        <p v-show="error">An error occured</p>
+        <p v-show="success">It is a success</p> -->
+        
+        <!--LOOPING WITH v-for-->
+        <!--Looping through an array-->
+        <ul>
+            <li v-for="x in characters">{{x}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="student in students">{{student.name}} - {{student.class}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="(x, index) in characters">{{index}}--{{x}}</li>
+        </ul>
+       
+        <div v-for="student in students">
+            <p>{{student.name}}</p>
+            <p>{{student.class}}</p>
+        </div>
+
+        <!--Looping through an object with v-for-->
+        <ul>
+            <li v-for="(val, key) in myProfile">{{val}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="(val, key) in myProfile">{{key}}:- {{val}}</li>
+        </ul>
+
+        <div v-for="(student, index) in students">
+            <p>Element with index {{index}}</p>
+            <li v-for="(val, key) in student">{{key}}:- {{val}}</li>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

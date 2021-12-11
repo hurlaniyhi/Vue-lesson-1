@@ -1,0 +1,30 @@
+#canvas{
+    width: 600px;
+    padding: 200px 20px;
+    text-align: center;
+    border: 1px solid #333
+}
+
+h1{
+    color: green
+}
+
+.trust {
+    color: blue;
+}
+
+.wow {
+    color: pink;
+}
+
+span {
+    color: green
+}
+
+.available .one {
+    color: red
+}
+
+.nearby .two {
+    color: yellow
+}
